@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 function App() {
   const [user, setUser] = useState([]);
-
+  document.title = 'Random Customer Data';
   const fetchUserData = () => {
     fetch('https://randomuser.me/api/?results=1')
     .then((response) => response.json())
