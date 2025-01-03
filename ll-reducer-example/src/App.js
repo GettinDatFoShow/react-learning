@@ -9,6 +9,8 @@ const reducer = (state, action) => {
 }
 
 function App() {
+  document.title = 'Reducer Example';
+
   const initialState = {money:100};
 
   const [state, dispatch] = useReducer(reducer, initialState);
