@@ -20,6 +20,8 @@ function ChoiceSelector(props) {
 
 function App() {
 
+  document.title = 'Blockchain Data'
+
   const [coinData, setCoinData] = useState({}); 
   const [choice, setChoice] = useState({coin: 'bpi', currency: 'USD'});
   const [chartName, setChartName]  = useState('Bitcoin');
