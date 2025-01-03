@@ -9,7 +9,7 @@ const reducer = (state, action) => {
 }
 
 function App() {
-  document.title = 'Reducer Example';
+  document.title = 'React Reducer Example';
 
   const initialState = {money:100};
 
