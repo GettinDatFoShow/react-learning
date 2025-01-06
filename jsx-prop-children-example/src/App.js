@@ -101,7 +101,7 @@ function App() {
       <header className="App-header">
         <h1>JSX Prop Children Example</h1>
         <Card style={{ width: '18rem' }}>
-      {  showModal ? (<ExampleModal toggleModal={toggleModal} />) : null }
+      {  showModal && (<ExampleModal toggleModal={toggleModal} />) }
           <Card.Img variant="top" src={logo} />
           <Card.Body>
             <Card.Title>Modal Open Example</Card.Title>
@@ -112,11 +112,11 @@ function App() {
             <Button variant="primary" onClick={toggleRedModal}>Toggle Red Modal</Button>
             <Button variant="primary" onClick={toggleAlert}>Toggle Alert</Button>
           </Card.Body>
-          {  showRedModal ? (<ExampleModal children={<ExampleChild toggleRedModal={toggleRedModal}/>} toggleModal={toggleRedModal} />) : null }
+          {  showRedModal && (<ExampleModal children={<ExampleChild toggleRedModal={toggleRedModal}/>} toggleModal={toggleRedModal} />) }
         </Card>
       </header>
       <main>
-        {showAlert ? (
+        {showAlert && (
           <Alert>
             <h4>Delete Account</h4>
             <p>
@@ -124,7 +124,7 @@ function App() {
             </p>
             <DeleteButton toggleAlert={toggleAlert}/>
           </Alert>
-          ) : null}
+          )}
       </main>
     </div>
   );
