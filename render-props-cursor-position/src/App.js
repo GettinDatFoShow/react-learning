@@ -28,10 +28,6 @@ const MousePosition = ({ render }) => {
 
 // This component should not receive any props
 const PanelMouseLogger = () => {
-  // The below if statement can be removed after the render props pattern is implemented
-  if (!mousePosition) {
-    return null;
-  }
   return (
     <div className="BasicTracker">
       <p>Mouse position:</p>
@@ -49,10 +45,6 @@ const PanelMouseLogger = () => {
 
 // This component should not receive any props
 const PointMouseLogger = () => {
-  // The below if statement can be removed after the render props pattern is implemented
-  if (!mousePosition) {
-    return null;
-  }
   return (
     <MousePosition
       render={({ mousePosition }) => (
